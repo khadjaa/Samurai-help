@@ -31,10 +31,16 @@ console.log(callbackFunc);// [2, 4, 6]
 
 
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
-// const applyOperation = (x, y, operation) => {}
-// const add = ;
-// const result = applyOperation(2, 3, add);
-// console.log(result);
+const applyOperation = (x, y, operation) => {
+    return operation(x, y)
+}
+
+const add = addFunction = (x, y) => {
+    return x + y
+}
+
+const result = applyOperation(2, 3, add);
+console.log(result);
 
 
 
