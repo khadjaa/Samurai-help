@@ -51,6 +51,19 @@ const user = {
     scores: 135,
 }
 
+function checkUserAge (age) {
+    if(age > 18) {
+        return 'yes you can sel alcohol for this person'
+    } else {
+        return 'call to police you have a big problem'
+    }
+}
+
+// console.log(checkUserAge(user.age) + ' ---- user before copy')
+// let copyUser = user
+// copyUser.age = 16
+// console.log(checkUserAge(user.age)  + ' ---- user after copy')
+// console.log(checkUserAge(copyUser.age) + ' ---- new person')
 
 // //1. Вывести массив с именами, в котором все имена будут прописаны большими буквами
 // console.log(students.map())
@@ -62,7 +75,8 @@ const user = {
 // console.log(students.filter())
 
 //4. Объект user добавить в массив
-// let copyStudents =
+// let copyStudents = [...students]
+// console.log(typeof copyStudents.push(user))
 // console.log(copyStudents)
 
 //5. Удалить студента "John"
@@ -87,5 +101,19 @@ const user = {
 
 
 
+const doAfter = (second) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            let number = Math.random()
+            resolve(number)
+        }, second * 1000)
+    })
+}
 
+let pr = doAfter(2)
 
+setTimeout(() => {
+    pr.then(() => {
+        console.log('pr')
+    })
+}, 1000)
