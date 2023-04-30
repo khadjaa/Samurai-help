@@ -12,19 +12,19 @@
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2)
 // вызова и возвращает новый массив, содержащий результат применения функции
 // обратного вызова к каждому элементу исходного массива.
-const applyCallback = (array, callback) => {
-    return array.map(element => {
-        return callback(element)
-    })
-}
-
-const multiplyElementByTwo = (element) => {
-    return element * 2
-}
-
-const array = [1, 2, 3];
-const callbackFunc = applyCallback(array, multiplyElementByTwo); // что-то нужно прописать
-console.log(callbackFunc);// [2, 4, 6]
+// const applyCallback = (array, callback) => {
+//     return array.map(element => {
+//         return callback(element)
+//     })
+// }
+//
+// const multiplyElementByTwo = (element) => {
+//     return element * 2
+// }
+//
+// const array = [1, 2, 3];
+// const callbackFunc = applyCallback(array, multiplyElementByTwo); // что-то нужно прописать
+// console.log(callbackFunc);// [2, 4, 6]
 
 
 
@@ -46,21 +46,29 @@ console.log(result);
 
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
-//const filterStrings = (array, callback) => {}
-//const array = ['hello', 'world', 'javascript', 'callback'];
-//const sortFunc = //написать функцию
-//const filtered = filterStrings(array, sortFunc); // что- добавить
-//console.log(filtered);
+// const filterStrings = (array, callback) => {}
+// const array = ['hello', 'world', 'javascript', 'callback'];
+// const sortFunc = //написать функцию
+// const filtered = filterStrings(array, sortFunc); // что- добавить
+// console.log(filtered);
 
 
 
 
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
-//const zipArrays = (array1, array2, callback) => {}
-//const array1 = [1, 2, 3];
-//const array2 = [4, 5, 6];
-//const zippedFunc = ;//написать функцию
-//console.log(zipArrays(array1, array2, zippedFunc))
+const zipArrays = (array1, array2, callback) => {
+    return callback(array1, array2)
+}
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const zippedFunc = (array1, array2) => {
+    let newArray = []
+    for (let i = 0; i < array1.length; i++) {
+        newArray.push(array1[i] + array2[i])
+    }
+    return newArray
+}
+console.log(zipArrays(array1, array2, zippedFunc))
 
 
 
