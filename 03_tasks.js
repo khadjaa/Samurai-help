@@ -74,13 +74,20 @@ console.log(zipArrays(array1, array2, zippedFunc))
 
 
 //6 Создайте функцию, которая принимает массив объектов и функцию обратного вызова, которая возвращает массив значений свойства age.
-// const pluck = (array, property) => {}
-// const people = [
-//     { name: 'John', age: 25 },
-//     { name: 'Jane', age: 30 },
-//     { name: 'Bob', age: 20 }
-// ];
-// console.log(pluck(people, 'age'));
+const pluck = (array, property) => {
+    return property(array)
+}
+
+const arrayOfAges = (array) => {
+    return array.map(el => el.age)
+}
+
+const people = [
+    { name: 'John', age: 25 },
+    { name: 'Jane', age: 30 },
+    { name: 'Bob', age: 20 }
+];
+console.log(pluck(people, arrayOfAges));
 
 
 
