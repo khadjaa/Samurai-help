@@ -27,9 +27,6 @@
 // console.log(callbackFunc);// [2, 4, 6]
 
 
-
-
-
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
 const applyOperation = (x, y, operation) => {
     return operation(x, y)
@@ -43,16 +40,12 @@ const result = applyOperation(2, 3, add);
 console.log(result);
 
 
-
-
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
 // const filterStrings = (array, callback) => {}
 // const array = ['hello', 'world', 'javascript', 'callback'];
 // const sortFunc = //написать функцию
 // const filtered = filterStrings(array, sortFunc); // что- добавить
 // console.log(filtered);
-
-
 
 
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
@@ -71,8 +64,6 @@ const zippedFunc = (array1, array2) => {
 console.log(zipArrays(array1, array2, zippedFunc))
 
 
-
-
 //6 Создайте функцию, которая принимает массив объектов и функцию обратного вызова, которая возвращает массив значений свойства age.
 const pluck = (array, property) => {
     return property(array)
@@ -83,12 +74,11 @@ const arrayOfAges = (array) => {
 }
 
 const people = [
-    { name: 'John', age: 25 },
-    { name: 'Jane', age: 30 },
-    { name: 'Bob', age: 20 }
+    {name: 'John', age: 25},
+    {name: 'Jane', age: 30},
+    {name: 'Bob', age: 20}
 ];
 console.log(pluck(people, arrayOfAges));
-
 
 
 // 7. Создать функцию которая будет проверять является ли строка полиндромом
@@ -100,28 +90,32 @@ const isPolindrom = (word) => {
 console.log(isPolindrom("шабаш АшА шабаш"))
 
 
-
-
-
 // 8. Вывести самое короткое слово в консоль
-// const findShort = (sentence) => {}
+// const findShort = (sentence) => {
+//     const words = sentence.split(" ");
+//     let shortest = words[0];
+//
+//     for (let i = 1; i < words.length; i++) {
+//         if (words[i].length < shortest.length) {
+//             shortest = words[i];
+//         }
+//     }
+//
+//     return shortest
+// }
 // console.log(findShort('The smallest word in sentence'))
 
 
-
-
 // 9. Вывести в консоль инициалы (Александр Петров - А.В.)
-//const toInitials = (name) = {}
-// console.log(toInitials("Bill gates"))
-
-
+const toInitials = (name) => {
+    return name.split(' ').map(el => el.charAt(0)).join('.') + '.'
+}
+console.log(toInitials("Bill Gates"))
 
 
 // 10. Создание дубликатов символов строки ("abcd") => "A-Bb-Ccc-Dddd"
 // const duplicate = (str) => {}
 // console.log(duplicate('abcd'));
-
-
 
 
 // 11. Отформатировать цифры в телефонный номер (123456789) => (123) 456-789
