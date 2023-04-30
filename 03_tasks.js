@@ -91,12 +91,13 @@ console.log(pluck(people, arrayOfAges));
 
 
 
-
-
 // 7. Создать функцию которая будет проверять является ли строка полиндромом
 //Палиндро́м — число, буквосочетание, слово или текст, одинаково читающееся в обоих направлениях.
-// const isPolindrom = (word) => {}
-// console.log(isPolindrom("шабаш"))
+const isPolindrom = (word) => {
+    const reversedStr = word.split("").reverse().join("");
+    return word === reversedStr;
+}
+console.log(isPolindrom("шабаш АшА шабаш"))
 
 
 
