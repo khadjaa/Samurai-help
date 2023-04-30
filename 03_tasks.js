@@ -91,19 +91,19 @@ console.log(isPolindrom("шабаш АшА шабаш"))
 
 
 // 8. Вывести самое короткое слово в консоль
-// const findShort = (sentence) => {
-//     const words = sentence.split(" ");
-//     let shortest = words[0];
-//
-//     for (let i = 1; i < words.length; i++) {
-//         if (words[i].length < shortest.length) {
-//             shortest = words[i];
-//         }
-//     }
-//
-//     return shortest
-// }
-// console.log(findShort('The smallest word in sentence'))
+const findShort = (sentence) => {
+    const words = sentence.split(" ");
+    let shortest = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length < shortest.length) {
+            shortest = words[i];
+        }
+    }
+
+    return shortest
+}
+console.log(findShort('The smallest word in sentence'))
 
 
 // 9. Вывести в консоль инициалы (Александр Петров - А.В.)
