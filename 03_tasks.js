@@ -123,7 +123,9 @@ console.log(duplicate('abcd'));
 
 
 // 11. Отформатировать цифры в телефонный номер (123456789) => (123) 456-789
-// const phoneNumber = (number) => {}
-// console.log(phoneNumber('123456789'))
+const phoneNumber = (number) => {
+    return `(${number.slice(0, 3)}) ${number.slice(3, 6)}-${number.slice(6, 9)}`
+}
+console.log(phoneNumber('123456789'))
 
 
