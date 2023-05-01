@@ -110,15 +110,20 @@ console.log(findShort('The smallest word in sentence'))
 const toInitials = (name) => {
     return name.split(' ').map(el => el.charAt(0)).join('.') + '.'
 }
-console.log(toInitials("Bill Gates"))
+console.log(toInitials("Bill Gates vfr"))
 
 
 // 10. Создание дубликатов символов строки ("abcd") => "A-Bb-Ccc-Dddd"
-// const duplicate = (str) => {}
-// console.log(duplicate('abcd'));
+
+function duplicate(s) {
+    return [...s].map((elem,ind)=> elem.toUpperCase() + (elem.repeat(ind).toLocaleLowerCase())).join('-')
+}
+
+console.log(duplicate('abcd'));
 
 
 // 11. Отформатировать цифры в телефонный номер (123456789) => (123) 456-789
 // const phoneNumber = (number) => {}
 // console.log(phoneNumber('123456789'))
+
 
