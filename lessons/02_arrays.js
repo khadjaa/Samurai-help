@@ -212,6 +212,11 @@ console.log(findEl)
 //1) Отсортировать аниме в порядке убывания количества эпизодов.
 //2) Отсортировать аниме в порядке возрастания длины названия.
 //3) Отсортировать аниме в порядке убывания количества слов в жанре.
+animeArray.sort((a, b) => {
+    const aGenreWords = a.genre.split(' ').length;
+    const bGenreWords = b.genre.split(' ').length;
+    return bGenreWords - aGenreWords;
+});
 
 
 //11. concat()
