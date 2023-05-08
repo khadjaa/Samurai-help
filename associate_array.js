@@ -89,14 +89,15 @@ const films1 = Object.keys(movies).filter(m => movies[m].year === 1994)
 console.log(films1)
 
 // 3. Получить список всех фильмов, режиссером которых является Christopher Nolan
-
+const lists = Object.keys(movies).filter(m => movies[m].director === 'Christopher Nolan')
+console.log(lists)
 // 4. Дан список из 3-х объектов, необходимо из списка объектов сделать асоциативный массив. Для создания такого массива,
 // необходимо взять title в качестве ключа.
 
 const games = [
     {
         title: "Ведьмак 3: Дикая Охота",
-        developer: "CD Projekt Red",
+        developer: "CD Project Red",
         year: 2015,
         platform: "Multiplatform",
         genre: ["Action RPG"],
