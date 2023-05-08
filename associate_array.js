@@ -94,6 +94,8 @@ console.log(lists)
 // 4. Дан список из 3-х объектов, необходимо из списка объектов сделать асоциативный массив. Для создания такого массива,
 // необходимо взять title в качестве ключа.
 
+
+
 const games = [
     {
         title: "Ведьмак 3: Дикая Охота",
@@ -121,9 +123,21 @@ const games = [
     },
 ];
 
+const newArray = games.reduce((acc, obj) => {
+    acc[obj.title] = {...obj}
+    delete acc[obj.title].title
+    return acc
+}, {})
+
+console.log(newArray)
+
 //5. Получить список названий всех фильмов.
+const names = Object.keys(movies)
+console.log(names)
 
 // 6. Получить список всех режиссеров.
+const directors = Object.keys(movies).map(el => movies[el].director)
+console.log(directors)
 
 // 7. Получить список фильмов, вышедших в 90-х годах.
 
