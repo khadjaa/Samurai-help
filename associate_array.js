@@ -140,6 +140,8 @@ const directors = Object.keys(movies).map(el => movies[el].director)
 console.log(directors)
 
 // 7. Получить список фильмов, вышедших в 90-х годах.
+const filmsNineties = Object.keys(movies).filter(el => movies[el].year < 2000 && movies[el].year > 1990)
+console.log(filmsNineties)
 
 // 8. Получить список фильмов, отсортированных по году выхода.
 
