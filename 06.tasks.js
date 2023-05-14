@@ -10,10 +10,10 @@
 
 
 //2. Напишите функцию, которая принимает массив и возвращает его копию с добавленным элементом.
-// function addElement(arr, element) {}
-//  const numbers = [1, 2, 3];
-// console.log(addElement(numbers, 4)); // [1, 2, 3, 4]
-// console.log(numbers); // [1, 2, 3]
+const addElement = (arr, element) => [...arr, element]
+const numbers = [1, 2, 3];
+console.log(addElement(numbers, 4)); // [1, 2, 3, 4]
+console.log(numbers); // [1, 2, 3]
 
 
 //3. Напишите функцию, которая принимает объект и возвращает его копию с удаленным свойством "age".
