@@ -145,6 +145,7 @@ console.log(filmsNineties)
 
 // 8. Получить список фильмов, отсортированных по году выхода.
 
+
 const sort = Object.keys(movies).sort((a,b) => {
     return movies[a].year - movies[b].year
 })
