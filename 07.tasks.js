@@ -68,23 +68,24 @@ console.log(getCount("abracadabra"))
 // volume = Length * Width * Height
 // Но кто-то забыл использовать надлежащий учет, поэтому у нас есть только объем и длина одной стороны!
 // Вы должны выяснить, равны ли стороны прямоугольного параллелепипеда (= является кубом).
-// Возврат true, если кубоид может иметь равные стороны, возврат falseв противном случае.
-// Возврат falseтакже для недопустимых чисел (например, объем или сторона меньше или равна 0).
+// Возврат true, если кубоид может иметь равные стороны, возврат false в противном случае.
+// Возврат false также для недопустимых чисел (например, объем или сторона меньше или равна 0).
 // Примечание: сторона будет целым числом
 
 let cubeChecker = function (volume, side) {
+    return (volume <= 0 || side <=0) ? false : side === Math.cbrt(volume)
 };
 
-cubeChecker(56.3, 1)// false
-cubeChecker(-1, 2)// false
-cubeChecker(8, 3)// false
-cubeChecker(8, 2)// true
-cubeChecker(-8, -2) //false
+console.log(cubeChecker(56.3, 1))// false
+console.log(cubeChecker(-1, 2))// false
+console.log(cubeChecker(8, 3))// false
+console.log(cubeChecker(8, 2))// true
+console.log(cubeChecker(-8, -2)) //false
 
 
 //5.Функция должна возвращать словарь/объект/хэш с ключом "status", значение которого может: "busy"или "available"в
 // зависимости от значения истинности аргумента is_busy.
-// Но, как вы увидите после нажатия RUNили ATTEMPTв этом коде есть несколько ошибок, пожалуйста, исправьте их.
+// Но, как вы увидите после нажатия RUN или ATTEMPT в этом коде есть несколько ошибок, пожалуйста, исправьте их.
 
 function getStatus(isBusy) {
     let msg = (isBusy ? "busy" : "available");
