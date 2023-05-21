@@ -83,17 +83,18 @@ console.log(cubeChecker(8, 2))// true
 console.log(cubeChecker(-8, -2)) //false
 
 
-//5.Функция должна возвращать словарь/объект/хэш с ключом "status", значение которого может: "busy"или "available"в
+//5.Функция должна возвращать словарь/объект/хэш с ключом "status", значение которого может: "busy" или "available" в
 // зависимости от значения истинности аргумента is_busy.
 // Но, как вы увидите после нажатия RUN или ATTEMPT в этом коде есть несколько ошибок, пожалуйста, исправьте их.
 
 function getStatus(isBusy) {
     let msg = (isBusy ? "busy" : "available");
-    return
-    {
+    return {
         status: msg
     }
 }
+
+console.log(getStatus(''))
 
 
 
