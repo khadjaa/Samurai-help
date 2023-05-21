@@ -37,11 +37,15 @@ console.log(getNextLightColor('green'))
 // с той же точной логикой.
 
 function fixTheMeerkat(arr) {
+    return arr.reverse()
 }
 
-fixTheMeerkat(["tail", "body", "head"]) //["head", "body", "tail"]);
-fixTheMeerkat(["tails", "body", "heads"]) // ["heads", "body", "tails"]);
-fixTheMeerkat(["bottom", "middle", "top"])// ["top", "middle", "bottom"]);
+console.log(fixTheMeerkat(["tail", "body", "head"]) ) //["head", "body", "tail"]);
+console.log(fixTheMeerkat(["tails", "body", "heads"]))  // ["heads", "body", "tails"]);
+console.log(fixTheMeerkat(["bottom", "middle", "top"])) // ["top", "middle", "bottom"]);
+
+
+
 
 
 //3. Функция должна возвращает количество (количество) гласных в заданной строке.
