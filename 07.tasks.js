@@ -45,17 +45,23 @@ console.log(fixTheMeerkat(["tails", "body", "heads"]))  // ["heads", "body", "ta
 console.log(fixTheMeerkat(["bottom", "middle", "top"])) // ["top", "middle", "bottom"]);
 
 
-
-
-
 //3. Функция должна возвращает количество (количество) гласных в заданной строке.
 // Мы будем рассматривать a, e, i, o, u как гласные для этой Ката (но не y).
 // Входная строка будет состоять только из строчных букв и/или пробелов.
 
 function getCount(str) {
+    let count = 0
+    let arr = ['a', 'e', 'i', 'o', 'u']
+    for (let i = 0; i < str.length; i++) {
+        if(arr.includes(str[i])){
+            count++
+        }
+    }
+    return count
 }
 
-getCount("abracadabra")// 5
+console.log(getCount("abracadabra"))
+// 5
 
 
 //4.Чтобы найти объем (в кубических сантиметрах) прямоугольного параллелепипеда, используйте формулу:
