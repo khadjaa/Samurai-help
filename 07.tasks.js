@@ -1,15 +1,34 @@
 //1. Вы пишете код для управления светофорами в вашем городе. Вам нужна функция для обработки каждого изменения с green,
-// на yellow, на red, а затем greenснова.
+// на yellow, на red, а затем green снова.
 // Завершите функцию, которая принимает строку в качестве аргумента, представляющую текущее состояние
 // источника света, и возвращает строку, представляющую состояние, в которое свет должен измениться.
 // Например, когда вход равен green, вывод должен быть yellow.
 // но без использования if else
 
-function updateLight(current) {}
+function updateLight(current) {
+    return current === 'green'
+        ? 'yellow'
+        : 'yellow' === current
+            ? 'red'
+            : 'green'
+}
 
-updateLight("green") //"yellow"
-updateLight("yellow")/// "red"
-updateLight("red") //"green"
+console.log(updateLight("green"))//"yellow"
+console.log(updateLight("yellow"))/// "red"
+console.log(updateLight("red"))//"green"
+
+const colorMap = {
+    'green': 'yellow',
+    'yellow': 'red',
+    'red': 'green'
+};
+
+function getNextLightColor(currentColor) {
+    return colorMap[currentColor];
+}
+
+console.log(getNextLightColor('green'))
+
 
 //2. Ты в зоопарке... все сурикаты выглядят странно. Что-то пошло не так — кто-то поменял местами головы и хвосты!
 // Спасите животных, переключив их обратно. Вам будет предоставлен массив, который будет иметь три значения (хвост, тело, голова).
@@ -17,7 +36,8 @@ updateLight("red") //"green"
 // То же самое касается всех других массивов/списков, которые вы получите в тестах: вы должны изменить позиции элементов
 // с той же точной логикой.
 
-function fixTheMeerkat(arr) {}
+function fixTheMeerkat(arr) {
+}
 
 fixTheMeerkat(["tail", "body", "head"]) //["head", "body", "tail"]);
 fixTheMeerkat(["tails", "body", "heads"]) // ["heads", "body", "tails"]);
@@ -30,6 +50,7 @@ fixTheMeerkat(["bottom", "middle", "top"])// ["top", "middle", "bottom"]);
 
 function getCount(str) {
 }
+
 getCount("abracadabra")// 5
 
 
@@ -41,14 +62,14 @@ getCount("abracadabra")// 5
 // Возврат falseтакже для недопустимых чисел (например, объем или сторона меньше или равна 0).
 // Примечание: сторона будет целым числом
 
-let cubeChecker = function(volume, side){
+let cubeChecker = function (volume, side) {
 };
 
 cubeChecker(56.3, 1)// false
 cubeChecker(-1, 2)// false
 cubeChecker(8, 3)// false
 cubeChecker(8, 2)// true
-cubeChecker(-8,-2) //false
+cubeChecker(-8, -2) //false
 
 
 //5.Функция должна возвращать словарь/объект/хэш с ключом "status", значение которого может: "busy"или "available"в
