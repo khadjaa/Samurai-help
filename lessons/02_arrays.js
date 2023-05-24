@@ -238,6 +238,9 @@ let newAnimeArray = [
     }
 ];
 
+const concatArray = animeArray.concat(newAnimeArray)
+console.log(concatArray)
+
 //12. includes()
 //Задание: Напишите функцию hasMainCharacter(array, character), которая будет принимать массив объектов animeArray и
 // имя главного персонажа (character) в качестве аргументов и возвращать true, если хотя бы один аниме в массиве имеет
