@@ -5,7 +5,7 @@
 // Например, когда вход равен green, вывод должен быть yellow.
 // но без использования if else
 
-function updateLight(current) {
+export function updateLight(current) {
     return current === 'green'
         ? 'yellow'
         : 'yellow' === current
@@ -40,7 +40,7 @@ function fixTheMeerkat(arr) {
     return arr.reverse()
 }
 
-console.log(fixTheMeerkat(["tail", "body", "head"]) ) //["head", "body", "tail"]);
+console.log(fixTheMeerkat(["tail", "body", "head"])) //["head", "body", "tail"]);
 console.log(fixTheMeerkat(["tails", "body", "heads"]))  // ["heads", "body", "tails"]);
 console.log(fixTheMeerkat(["bottom", "middle", "top"])) // ["top", "middle", "bottom"]);
 
@@ -53,7 +53,7 @@ function getCount(str) {
     let count = 0
     let arr = ['a', 'e', 'i', 'o', 'u']
     for (let i = 0; i < str.length; i++) {
-        if(arr.includes(str[i])){
+        if (arr.includes(str[i])) {
             count++
         }
     }
@@ -72,7 +72,7 @@ console.log(getCount("abracadabra"))
 // Примечание: сторона будет целым числом
 
 let cubeChecker = function (volume, side) {
-    return (volume <= 0 || side <=0) ? false : side === Math.cbrt(volume)
+    return (volume <= 0 || side <= 0) ? false : side === Math.cbrt(volume)
 };
 
 console.log(cubeChecker(56.3, 1))// false
@@ -95,6 +95,30 @@ function getStatus(isBusy) {
 
 console.log(getStatus(''))
 
+//6. Напишите функцию, которая находит самое часто встречающееся значение в массиве.
+function findMode(arr) {
+    let set = {}
+    let maxCount = 0;
+    let mostFrequentValue;
 
+    for (let i = 0; i < arr.length; i++) {
+        let value = arr[i];
+
+        if (set[value]) {
+            set[value]++;
+        } else {
+            set[value] = 1;
+        }
+
+        if (set[value] > maxCount) {
+            maxCount = set[value];
+            mostFrequentValue = value;
+        }
+    }
+    return mostFrequentValue
+}
+
+const arr = [1, 2, 3, 4, 5, 2, 3, 2];
+console.log(findMode(arr)); // Выведет 2
 
 
