@@ -58,17 +58,34 @@
 //const numbers = getNumbersFromUser();
 //console.log(numbers); // Выведет массив введенных пользователем чисел
 
-const sumSquareEvenRootOdd = ns => {
-    let sum = 0
-    ns.map(n => n % 2 === 0 ? sum += n ** 2 : sum += Math.sqrt(n))
-    return +sum.toFixed(2)
-    // your code goes here
-};
+// const sumSquareEvenRootOdd = ns => {
+//     let sum = 0
+//     ns.map(n => n % 2 === 0 ? sum += n ** 2 : sum += Math.sqrt(n))
+//     return +sum.toFixed(2)
+//     // your code goes here
+// };
+//
+// console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]))
 
-console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]))
 
+function twoSum(numbers, target) {
+    let indexes = [];
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
+            if (numbers[i] + numbers[j] === target) {
+                indexes.push(i);
+                indexes.push(j);
+                return indexes; // Выходим из функции после нахождения первой пары
+            }
+        }
+    }
+    return indexes;
+    // ...
+}
 
-
+console.log(twoSum([1, 2, 3], 4))
+console.log(twoSum([2, 2, 3], 4))
+console.log(twoSum([2, 3, 1], 4))
 
 
 
