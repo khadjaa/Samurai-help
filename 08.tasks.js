@@ -68,24 +68,34 @@
 // console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]))
 
 
-function twoSum(numbers, target) {
-    let indexes = [];
-    for (let i = 0; i < numbers.length; i++) {
-        for (let j = i + 1; j < numbers.length; j++) {
-            if (numbers[i] + numbers[j] === target) {
-                indexes.push(i);
-                indexes.push(j);
-                return indexes; // Выходим из функции после нахождения первой пары
-            }
-        }
+// function twoSum(numbers, target) {
+//     let indexes = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             if (numbers[i] + numbers[j] === target) {
+//                 indexes.push(i);
+//                 indexes.push(j);
+//                 return indexes; // Выходим из функции после нахождения первой пары
+//             }
+//         }
+//     }
+//     return indexes;
+//     // ...
+// }
+//
+// console.log(twoSum([1, 2, 3], 4))
+// console.log(twoSum([2, 2, 3], 4))
+// console.log(twoSum([2, 3, 1], 4))
+
+function spacey(array){
+    let noSpace = []
+    let str =''
+    for (let i = 0; i < array.length; i++) {
+        str += array[i]
+        noSpace.push(str)
     }
-    return indexes;
-    // ...
+    return noSpace
 }
 
-console.log(twoSum([1, 2, 3], 4))
-console.log(twoSum([2, 2, 3], 4))
-console.log(twoSum([2, 3, 1], 4))
-
-
+console.log(spacey(['i', 'have','no','space']))
 
