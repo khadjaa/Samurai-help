@@ -99,27 +99,33 @@
 //
 // console.log(spacey(['i', 'have','no','space']))
 
-function stringsConstruction(a, b) {
-    let count = 0;
-    let finding = true;
-    let pos;
-    b = b.split("");
-    while (finding) {
-        for (let i = 0; i < a.length; i++) {
-            debugger
-            pos = b.indexOf(a[i]);
-            if (pos >= 0) {
-                b.splice(pos, 1);
-            } else {
-                finding = false;
-                break;
-            }
-        }
-        if (finding) {
-            count++;
-        }
-    }
-    return count;
+// function stringsConstruction(a, b) {
+//     let count = 0;
+//     let finding = true;
+//     let pos;
+//     b = b.split("");
+//     while (finding) {
+//         for (let i = 0; i < a.length; i++) {
+//             pos = b.indexOf(a[i]);
+//             if (pos >= 0) {
+//                 b.splice(pos, 1);
+//             } else {
+//                 finding = false;
+//                 break;
+//             }
+//         }
+//         if (finding) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+//
+// console.log(stringsConstruction('hnccv', 'hncvohcjhdfnhonxddcocjncchnvohchnjohcvnhjdhihsn'))
+
+let number = function(array){
+    return array.map((el, i) => ++i + ': ' +el)
+    //your awesome code here
 }
 
-console.log(stringsConstruction('hnccv', 'hncvohcjhdfnhonxddcocjncchnvohchnjohcvnhjdhihsn'))
+console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
