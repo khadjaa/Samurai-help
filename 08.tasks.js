@@ -87,15 +87,39 @@
 // console.log(twoSum([2, 2, 3], 4))
 // console.log(twoSum([2, 3, 1], 4))
 
-function spacey(array){
-    let noSpace = []
-    let str =''
-    for (let i = 0; i < array.length; i++) {
-        str += array[i]
-        noSpace.push(str)
+// function spacey(array){
+//     let noSpace = []
+//     let str =''
+//     for (let i = 0; i < array.length; i++) {
+//         str += array[i]
+//         noSpace.push(str)
+//     }
+//     return noSpace
+// }
+//
+// console.log(spacey(['i', 'have','no','space']))
+
+function stringsConstruction(a, b) {
+    let count = 0;
+    let finding = true;
+    let pos;
+    b = b.split("");
+    while (finding) {
+        for (let i = 0; i < a.length; i++) {
+            debugger
+            pos = b.indexOf(a[i]);
+            if (pos >= 0) {
+                b.splice(pos, 1);
+            } else {
+                finding = false;
+                break;
+            }
+        }
+        if (finding) {
+            count++;
+        }
     }
-    return noSpace
+    return count;
 }
 
-console.log(spacey(['i', 'have','no','space']))
-
+console.log(stringsConstruction('hnccv', 'hncvohcjhdfnhonxddcocjncchnvohchnjohcvnhjdhihsn'))
