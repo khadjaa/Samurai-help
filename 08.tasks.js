@@ -123,9 +123,14 @@
 //
 // console.log(stringsConstruction('hnccv', 'hncvohcjhdfnhonxddcocjncchnvohchnjohcvnhjdhihsn'))
 
-let number = function(array){
-    return array.map((el, i) => ++i + ': ' +el)
-    //your awesome code here
-}
+// let number = function(array){
+//     return array.map((el, i) => ++i + ': ' +el)
+//     //your awesome code here
+// }
+//
+// console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
 
-console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
+function solution(start, finish) {
+    let diff = finish - start
+    return Math.floor(diff / 3) + (diff % 3)
+}
