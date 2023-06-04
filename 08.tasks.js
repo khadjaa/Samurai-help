@@ -129,8 +129,26 @@
 // }
 //
 // console.log(number(["a", "b", "c"])) // ["1: a", "2: b", "3: c"]
+//
+// function solution(start, finish) {
+//     let jumps = 0;
+//     let iFinish = 0;
+//     for (let i = start; i < finish; i+=3) {
+//         jumps ++
+//         iFinish = i;
+//     }
+//     if ((iFinish+3) - finish === 1) {jumps++}
+//     return jumps;
+// }
+//
+// console.log(solution(1, 98))
 
-function solution(start, finish) {
-    let diff = finish - start
-    return Math.floor(diff / 3) + (diff % 3)
-}
+const reverseSeq = n => {
+    let arr = []
+    for (let i = n; i >= 1; i--) {
+        arr.push(i)
+    }
+    return arr;
+};
+
+console.log(reverseSeq(5))
