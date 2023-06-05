@@ -161,17 +161,26 @@
 //
 // console.log(arrayPlusArray([1,2 ,3], [4,5,6]))
 
-function noIfsNoButs(a, b) {
-    switch (true) {
-        case a > b: {
-            return `${a} is greater than ${b}`
-        }
-        case a < b: {
-            return `${a} is smaller than ${b}`
-        }
-        default:
-            return `${a} is equal to ${b}`
-    }
+// function noIfsNoButs(a, b) {
+//     switch (true) {
+//         case a > b: {
+//             return `${a} is greater than ${b}`
+//         }
+//         case a < b: {
+//             return `${a} is smaller than ${b}`
+//         }
+//         default:
+//             return `${a} is equal to ${b}`
+//     }
+// }
+//
+// console.log(noIfsNoButs(4, 5))
+
+function eliminateUnsetBits(number) {
+    // your code here
+    const num = number.split('').filter(el => el !== '0').join('')
+    return num ? parseInt(num, 2) : 0
+
 }
 
-console.log(noIfsNoButs(4, 5))
+console.log(eliminateUnsetBits('000'))
