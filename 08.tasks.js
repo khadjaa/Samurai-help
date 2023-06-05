@@ -176,11 +176,43 @@
 //
 // console.log(noIfsNoButs(4, 5))
 
-function eliminateUnsetBits(number) {
-    // your code here
-    const num = number.split('').filter(el => el !== '0').join('')
-    return num ? parseInt(num, 2) : 0
+// function eliminateUnsetBits(number) {
+//     // your code here
+//     const num = number.split('').filter(el => el !== '0').join('')
+//     return num ? parseInt(num, 2) : 0
+// }
+//
+// console.log(eliminateUnsetBits('000'))
 
+// function solve(arr) {
+//     let duplicate = {}
+//     let arrDup = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (duplicate[arr[i]]) {
+//             duplicate[arr[i]]++
+//         } else {
+//             duplicate[arr[i]] = 1
+//         }
+//     }
+//     const arrKeys = Object.keys(duplicate)
+//     for (let i = 0; i < arrKeys.length; i++) {
+//         arrDup.push(+arrKeys[i])
+//     }
+//
+//     return arrDup;
+// }
+
+function solveChat(arr) {
+    const map = new Map();
+
+    return arr.reduceRight((acc, curr) => {
+        if (!map.has(curr)) {
+            map.set(curr, true);
+            acc.unshift(curr);
+        }
+        return acc;
+    }, []);
 }
 
-console.log(eliminateUnsetBits('000'))
+console.log(solveChat([3, 4, 4, 3, 6, 3])) //[ 4, 6, 3 ]
