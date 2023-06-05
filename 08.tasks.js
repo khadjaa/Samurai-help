@@ -153,10 +153,25 @@
 //
 // console.log(reverseSeq(5))
 
-function arrayPlusArray(arr1, arr2) {
-    let count = 0
-    arr1.concat(arr2).map(el => count += el)
-    return count
+// function arrayPlusArray(arr1, arr2) {
+//     let count = 0
+//     arr1.concat(arr2).map(el => count += el)
+//     return count
+// }
+//
+// console.log(arrayPlusArray([1,2 ,3], [4,5,6]))
+
+function noIfsNoButs(a, b) {
+    switch (true) {
+        case a > b: {
+            return `${a} is greater than ${b}`
+        }
+        case a < b: {
+            return `${a} is smaller than ${b}`
+        }
+        default:
+            return `${a} is equal to ${b}`
+    }
 }
 
-console.log(arrayPlusArray([1,2 ,3], [4,5,6]))
+console.log(noIfsNoButs(4, 5))
