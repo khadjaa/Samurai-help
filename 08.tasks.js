@@ -143,12 +143,20 @@
 //
 // console.log(solution(1, 98))
 
-const reverseSeq = n => {
-    let arr = []
-    for (let i = n; i >= 1; i--) {
-        arr.push(i)
-    }
-    return arr;
-};
+// const reverseSeq = n => {
+//     let arr = []
+//     for (let i = n; i >= 1; i--) {
+//         arr.push(i)
+//     }
+//     return arr;
+// };
+//
+// console.log(reverseSeq(5))
 
-console.log(reverseSeq(5))
+function arrayPlusArray(arr1, arr2) {
+    let count = 0
+    arr1.concat(arr2).map(el => count += el)
+    return count
+}
+
+console.log(arrayPlusArray([1,2 ,3], [4,5,6]))
