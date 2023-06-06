@@ -203,16 +203,20 @@
 //     return arrDup;
 // }
 
-function solveChat(arr) {
-    const map = new Map();
+// function solveChat(arr) {
+//     const map = new Map();
+//
+//     return arr.reduceRight((acc, curr) => {
+//         if (!map.has(curr)) {
+//             map.set(curr, true);
+//             acc.unshift(curr);
+//         }
+//         return acc;
+//     }, []);
+// }
+//
+// console.log(solveChat([3, 4, 4, 3, 6, 3])) //[ 4, 6, 3 ]
 
-    return arr.reduceRight((acc, curr) => {
-        if (!map.has(curr)) {
-            map.set(curr, true);
-            acc.unshift(curr);
-        }
-        return acc;
-    }, []);
+const find_average = (array) => {
+    return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
 }
-
-console.log(solveChat([3, 4, 4, 3, 6, 3])) //[ 4, 6, 3 ]
