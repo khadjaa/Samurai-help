@@ -217,6 +217,24 @@
 //
 // console.log(solveChat([3, 4, 4, 3, 6, 3])) //[ 4, 6, 3 ]
 
-const find_average = (array) => {
-    return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+// const find_average = (array) => {
+//     return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+// }
+
+function dropWhile(arr, pred) {
+    for (let i = 0; i < arr.length; i++) {
+        if (!pred(arr[i])) {
+            return arr.slice(i, arr.length)
+        }
+    }
+    return []
+    // Your Kafkaesque code here, plox...
 }
+
+function isEven(num) {
+    return num % 2 === 0;
+}
+
+let seq = [2, 4, 6, 8, 1, 2, 5, 4, 3, 2];
+
+console.log(dropWhile(seq, isEven))
