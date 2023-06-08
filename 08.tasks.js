@@ -221,20 +221,33 @@
 //     return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
 // }
 
-function dropWhile(arr, pred) {
-    for (let i = 0; i < arr.length; i++) {
-        if (!pred(arr[i])) {
-            return arr.slice(i, arr.length)
+// function dropWhile(arr, pred) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (!pred(arr[i])) {
+//             return arr.slice(i, arr.length)
+//         }
+//     }
+//     return []
+//     // Your Kafkaesque code here, plox...
+// }
+//
+// function isEven(num) {
+//     return num % 2 === 0;
+// }
+//
+// let seq = [2, 4, 6, 8, 1, 2, 5, 4, 3, 2];
+//
+// console.log(dropWhile(seq, isEven))
+
+function makeLatinSquare(n) {
+    const square = [];
+    for (let i = 0; i < n; i++) {
+        square[i] = [];
+        for (let j = 0; j < n; j++) {
+            square[i][j] = (i + j) % n + 1;
         }
     }
-    return []
-    // Your Kafkaesque code here, plox...
+    return square;
 }
 
-function isEven(num) {
-    return num % 2 === 0;
-}
-
-let seq = [2, 4, 6, 8, 1, 2, 5, 4, 3, 2];
-
-console.log(dropWhile(seq, isEven))
+console.log(makeLatinSquare(4))
