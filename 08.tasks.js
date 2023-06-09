@@ -239,15 +239,19 @@
 //
 // console.log(dropWhile(seq, isEven))
 
-function makeLatinSquare(n) {
-    const square = [];
-    for (let i = 0; i < n; i++) {
-        square[i] = [];
-        for (let j = 0; j < n; j++) {
-            square[i][j] = (i + j) % n + 1;
-        }
-    }
-    return square;
-}
+// function makeLatinSquare(n) {
+//     const square = [];
+//     for (let i = 0; i < n; i++) {
+//         square[i] = [];
+//         for (let j = 0; j < n; j++) {
+//             square[i][j] = (i + j) % n + 1;
+//         }
+//     }
+//     return square;
+// }
+//
+// console.log(makeLatinSquare(4))
 
-console.log(makeLatinSquare(4))
+function integrate(coefficient, exponent) {
+    return `${coefficient/(exponent+1)}x^${exponent+1}`
+}
