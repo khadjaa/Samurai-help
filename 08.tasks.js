@@ -259,9 +259,14 @@
 function position(letter){
     for (let i = 97; i <= 122; i++) {
         if (letter.charCodeAt(0) === i) {
-            return `Position of alphabet: ${i - 96}`
+            // return `Position of alphabet: ${i - 96}`
+            return i - 96
         }
     }
 }
 
-console.log(position('a'))
+position('v')
+
+const resultElement = document.getElementById('result');
+resultElement.textContent = `Position of alphabet: ${position('a')}`;
+
