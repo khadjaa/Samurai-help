@@ -252,6 +252,16 @@
 //
 // console.log(makeLatinSquare(4))
 
-function integrate(coefficient, exponent) {
-    return `${coefficient/(exponent+1)}x^${exponent+1}`
+// function integrate(coefficient, exponent) {
+//     return `${coefficient/(exponent+1)}x^${exponent+1}`
+// }
+
+function position(letter){
+    for (let i = 97; i <= 122; i++) {
+        if (letter.charCodeAt(0) === i) {
+            return `Position of alphabet: ${i - 96}`
+        }
+    }
 }
+
+console.log(position('a'))
