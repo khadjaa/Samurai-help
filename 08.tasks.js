@@ -268,5 +268,24 @@ function position(letter){
 position('v')
 
 const resultElement = document.getElementById('result');
-resultElement.textContent = `Position of alphabet: ${position('a')}`;
 
+var Calculator = {
+    add(a, b) {
+        return a + b
+    },
+    subtract(a, b) {
+        return a - b
+    },
+    multiple(a, b) {
+        return a * b
+    },
+    divide(a, b) {
+        if(a === 0 || b === 0) {
+            return false
+        }
+        return a / b
+    }
+};
+resultElement.textContent = `Calculator: ${Calculator.add(5, 2)}`;
+
+console.log(Calculator.add(5, 2))
