@@ -310,18 +310,22 @@
 //     return str
 // }
 
-const squareDigitsSequence = (a0) => {
-  const seen = new Set(); // создаем множество для хранения уже сгенерированных чисел последовательности
-  let count = a0;
-  let length = 1;
+// const squareDigitsSequence = (a0) => {
+//   const seen = new Set(); // создаем множество для хранения уже сгенерированных чисел последовательности
+//   let count = a0;
+//   let length = 1;
+//
+//   while (!seen.has(count)) { // продолжаем генерировать числа до тех пор, пока не найдем число, которое уже было сгенерировано
+//     seen.add(count);
+//     count = String(count).split('').reduce((sum, digit) => sum + digit ** 2, 0);
+//     length++;
+//   }
+//     console.log(seen)
+//   return length;
+// };
+//
+// console.log(squareDigitsSequence(21))
 
-  while (!seen.has(count)) { // продолжаем генерировать числа до тех пор, пока не найдем число, которое уже было сгенерировано
-    seen.add(count);
-    count = String(count).split('').reduce((sum, digit) => sum + digit ** 2, 0);
-    length++;
-  }
-    console.log(seen)
-  return length;
-};
-
-console.log(squareDigitsSequence(21))
+function contamination(text, char){
+  return char.repeat(text.length)
+}
