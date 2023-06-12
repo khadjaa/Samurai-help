@@ -256,36 +256,72 @@
 //     return `${coefficient/(exponent+1)}x^${exponent+1}`
 // }
 
-function position(letter){
-    for (let i = 97; i <= 122; i++) {
-        if (letter.charCodeAt(0) === i) {
-            // return `Position of alphabet: ${i - 96}`
-            return i - 96
-        }
-    }
-}
+// function position(letter) {
+//     for (let i = 97; i <= 122; i++) {
+//         if (letter.charCodeAt(0) === i) {
+//             // return `Position of alphabet: ${i - 96}`
+//             return i - 96
+//         }
+//     }
+// }
+//
+// position('v')
 
-position('v')
+// const resultElement = document.getElementById('result');
+//
+// var Calculator = {
+//     add(a, b) {
+//         return a + b
+//     },
+//     subtract(a, b) {
+//         return a - b
+//     },
+//     multiple(a, b) {
+//         return a * b
+//     },
+//     divide(a, b) {
+//         if (a === 0 || b === 0) {
+//             return false
+//         }
+//         return a / b
+//     }
+// };
 
-const resultElement = document.getElementById('result');
+// function squareDigitsSequence(a0) {
+//     //coding and coding...
+//     let count = check(a0)
+//     if (a0 === 1) {
+//         return 2
+//     }
+//     let pos = []
+//     let dig = 1
+//     while (!pos.includes(count)) {
+//         debugger
+//         count = check(count)
+//         pos.push(count)
+//         dig++
+//     }
+//     return dig
+// }
+//
+// const check = (count) => {
+//     let str = count.toString().split('').reduce((sum, digit) => sum + digit ** 2, 0);
+//     console.log('check', str)
+//     return str
+// }
 
-var Calculator = {
-    add(a, b) {
-        return a + b
-    },
-    subtract(a, b) {
-        return a - b
-    },
-    multiple(a, b) {
-        return a * b
-    },
-    divide(a, b) {
-        if(a === 0 || b === 0) {
-            return false
-        }
-        return a / b
-    }
+const squareDigitsSequence = (a0) => {
+  const seen = new Set(); // создаем множество для хранения уже сгенерированных чисел последовательности
+  let count = a0;
+  let length = 1;
+
+  while (!seen.has(count)) { // продолжаем генерировать числа до тех пор, пока не найдем число, которое уже было сгенерировано
+    seen.add(count);
+    count = String(count).split('').reduce((sum, digit) => sum + digit ** 2, 0);
+    length++;
+  }
+    console.log(seen)
+  return length;
 };
-resultElement.textContent = `Calculator: ${Calculator.add(5, 2)}`;
 
-console.log(Calculator.add(5, 2))
+console.log(squareDigitsSequence(21))
