@@ -326,6 +326,21 @@
 //
 // console.log(squareDigitsSequence(21))
 
-function contamination(text, char){
-  return char.repeat(text.length)
+// function contamination(text, char){
+//   return char.repeat(text.length)
+// }
+
+function countDiceThrows(n) {
+  const dp = new Array(n + 1).fill(0);
+  dp[0] = 1;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= 6; j++) {
+      if (j <= i) {
+        dp[i] += dp[i - j];
+      }
+    }
+  }
+  return dp[n];
 }
+
+console.log(countDiceThrows(4)); // Output: 8
