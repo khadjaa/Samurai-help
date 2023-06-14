@@ -365,15 +365,22 @@
 //   return encodedText.join(' ');
 // }
 
-function triangular( n ) {
-  if ( n <= 0) {
-    return 0
-  }
-  let sum = 0
-  for (let i = n; i > 0; i--) {
-    sum += i
-  }
-  return sum
+// function triangular( n ) {
+//   if ( n <= 0) {
+//     return 0
+//   }
+//   let sum = 0
+//   for (let i = n; i > 0; i--) {
+//     sum += i
+//   }
+//   return sum
+// }
+//
+// console.log(triangular(3));
+
+function xor(a, b) {
+  // TODO: Program Me
+  return a !== b;
 }
 
-console.log(triangular(3));
+console.log(xor(false, false))
