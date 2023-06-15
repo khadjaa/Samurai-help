@@ -419,4 +419,4 @@ function solve(s) {
     return maxCount
 }
 
-console.log(solve('ashovvvvvvvvvvvvvvvvvvvvvvvvvvvvv'))
+console.log(solve('ashovvvvvvvvvvv'))
