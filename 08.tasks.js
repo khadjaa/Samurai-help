@@ -433,3 +433,5 @@ function findArray(arr1, arr2) {
 }
 
 console.log(findArray([0, 1, 5, 2, 1, 8, 9, 1, 5], [2, 2, 2]))
+
+const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
