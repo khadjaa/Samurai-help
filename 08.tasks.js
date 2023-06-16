@@ -392,31 +392,44 @@
 //
 // console.log(sortByLength(["Beg", "Life", "I", "To"]))
 
-function solve(s) {
-    const alphabet = {
-        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10,
-        k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18, s: 19,
-        t: 20, u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
-    };
+// function solve(s) {
+//     const alphabet = {
+//         a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10,
+//         k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18, s: 19,
+//         t: 20, u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+//     };
+//
+//     let maxCount = 0
+//     let currentCount = 0
+//
+//     for (let i = 0; i < s.length; i++) {
+//         if ('aeiou'.indexOf(s[i]) === -1) {
+//             currentCount += alphabet[s[i]]
+//             if (currentCount > maxCount) {
+//                 maxCount = currentCount
+//             }
+//         } else {
+//             if (currentCount > maxCount) {
+//                 maxCount = currentCount
+//             }
+//             currentCount = 0
+//         }
+//     }
+//
+//     return maxCount
+// }
+//
+// console.log(solve('ashovvvvvvvvvvv'))
 
-    let maxCount = 0
-    let currentCount = 0
-
-    for (let i = 0; i < s.length; i++) {
-        if ('aeiou'.indexOf(s[i]) === -1) {
-            currentCount += alphabet[s[i]]
-            if (currentCount > maxCount) {
-                maxCount = currentCount
-            }
-        } else {
-            if (currentCount > maxCount) {
-                maxCount = currentCount
-            }
-            currentCount = 0
-        }
+function findArray(arr1, arr2) {
+    if (arr1.length === 0 || arr2.length === 0) {
+        return []
     }
-
-    return maxCount
+    let arr = []
+    for (let i = 0; i < arr2.length; i++) {
+        arr.push(arr1[arr2[i]])
+    }
+    return arr
 }
 
-console.log(solve('ashovvvvvvvvvvv'))
+console.log(findArray([0, 1, 5, 2, 1, 8, 9, 1, 5], [2, 2, 2]))
