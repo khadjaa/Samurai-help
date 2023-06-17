@@ -421,17 +421,70 @@
 //
 // console.log(solve('ashovvvvvvvvvvv'))
 
-function findArray(arr1, arr2) {
-    if (arr1.length === 0 || arr2.length === 0) {
-        return []
-    }
-    let arr = []
-    for (let i = 0; i < arr2.length; i++) {
-        arr.push(arr1[arr2[i]])
-    }
-    return arr
+// function findArray(arr1, arr2) {
+//     if (arr1.length === 0 || arr2.length === 0) {
+//         return []
+//     }
+//     let arr = []
+//     for (let i = 0; i < arr2.length; i++) {
+//         arr.push(arr1[arr2[i]])
+//     }
+//     return arr
+// }
+//
+// console.log(findArray([0, 1, 5, 2, 1, 8, 9, 1, 5], [2, 2, 2]))
+//
+// const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+
+// function columnize(items, n) {
+//     // let count = 1
+//     // for (let i = 0; i < items.length; i++) {
+//     //     if (count === n) {
+//     //         count = 0
+//     //         console.log(items[i] + '||\n')
+//     //
+//     //     } else {
+//     //         console.log(items[i] + '|')
+//     //     }
+//     //     count++
+//     // }
+//     const longestLength = items.reduce((max, str) => Math.max(max, str.length), 0);
+//
+//     const columns = items.map(str => str.padEnd(longestLength, " "));
+//     const numRows = Math.ceil(columns.length / n);
+//
+//     let output = "";
+//     for (let i = 0; i < numRows; i++) {
+//         for (let j = 0; j < n; j++) {
+//             const index = i + j * numRows;
+//             if (index < columns.length) {
+//                 output += columns[index];
+//                 if (j < n - 1) {
+//                     output += " | ";
+//                 }
+//             }
+//         }
+//         output += "\n";
+//     }
+//
+//     return output;
+// }
+//
+// console.log(columnize(["1", "12", "123", "1234", "12345", "123456"], 2))
+
+function XO(str) {
+    let o = 0
+    let x = 0
+
+    str.toLowerCase().split('').reduce((acc, curr) => {
+        if (curr === 'x') {
+            x++
+        } else if (curr === 'o'){
+            o++
+        }
+    },'')
+
+    return x === o
 }
 
-console.log(findArray([0, 1, 5, 2, 1, 8, 9, 1, 5], [2, 2, 2]))
-
-const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+console.log(XO('zpzpzpp'))
