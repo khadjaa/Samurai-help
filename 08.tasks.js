@@ -472,19 +472,43 @@
 //
 // console.log(columnize(["1", "12", "123", "1234", "12345", "123456"], 2))
 
-function XO(str) {
-    let o = 0
-    let x = 0
+// function XO(str) {
+//     let o = 0
+//     let x = 0
+//
+//     str.toLowerCase().split('').reduce((acc, curr) => {
+//         if (curr === 'x') {
+//             x++
+//         } else if (curr === 'o'){
+//             o++
+//         }
+//     },'')
+//
+//     return x === o
+// }
+//
+// console.log(XO('zpzpzpp'))
 
-    str.toLowerCase().split('').reduce((acc, curr) => {
-        if (curr === 'x') {
-            x++
-        } else if (curr === 'o'){
-            o++
-        }
-    },'')
+function toDayOfYear(arr) {
+    // return a number
+    let daysInMonth
+    let count = 0
 
-    return x === o
+    let isLeap = (arr[2] % 4 === 0 && arr[2] % 100 !== 0) || arr[2] % 400 === 0
+
+    if (isLeap) {
+        daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    } else {
+        daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    }
+
+    for (let i = 0; i < arr[1] - 1; i++) {
+        count += daysInMonth[i]
+    }
+
+    return count + arr[0]
 }
 
-console.log(XO('zpzpzpp'))
+console.log(toDayOfYear([31, 12, 2000]))
+console.log(toDayOfYear([1, 5, 3000]))
+console.log(toDayOfYear([5, 11, 1604]))
