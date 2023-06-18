@@ -489,26 +489,30 @@
 //
 // console.log(XO('zpzpzpp'))
 
-function toDayOfYear(arr) {
-    // return a number
-    let daysInMonth
-    let count = 0
+// function toDayOfYear(arr) {
+//     // return a number
+//     let daysInMonth
+//     let count = 0
+//
+//     let isLeap = (arr[2] % 4 === 0 && arr[2] % 100 !== 0) || arr[2] % 400 === 0
+//
+//     if (isLeap) {
+//         daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+//     } else {
+//         daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+//     }
+//
+//     for (let i = 0; i < arr[1] - 1; i++) {
+//         count += daysInMonth[i]
+//     }
+//
+//     return count + arr[0]
+// }
+//
+// console.log(toDayOfYear([31, 12, 2000]))
+// console.log(toDayOfYear([1, 5, 3000]))
+// console.log(toDayOfYear([5, 11, 1604]))
 
-    let isLeap = (arr[2] % 4 === 0 && arr[2] % 100 !== 0) || arr[2] % 400 === 0
-
-    if (isLeap) {
-        daysInMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    } else {
-        daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    }
-
-    for (let i = 0; i < arr[1] - 1; i++) {
-        count += daysInMonth[i]
-    }
-
-    return count + arr[0]
+function plural(n) {
+    return n === 1
 }
-
-console.log(toDayOfYear([31, 12, 2000]))
-console.log(toDayOfYear([1, 5, 3000]))
-console.log(toDayOfYear([5, 11, 1604]))
