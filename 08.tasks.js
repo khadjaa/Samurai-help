@@ -514,5 +514,5 @@
 // console.log(toDayOfYear([5, 11, 1604]))
 
 function plural(n) {
-    return n === 1
+    return n !== 1
 }
