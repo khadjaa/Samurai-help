@@ -529,8 +529,20 @@
 //     return arr
 // }
 
-function findNeedle(haystack) {
-    return `found the needle at position ${haystack.indexOf('needle')}`
+// function findNeedle(haystack) {
+//     return `found the needle at position ${haystack.indexOf('needle')}`
+// }
+//
+// console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
+
+function solve(compasses, gears, tablets) {
+    if (compasses < 0 && gears < 0 && tablets < 0) {
+        return 0
+    }
+    let countOnFirstStep = Math.min(compasses, gears, tablets) * 7;
+    let countOnSecondStep = (compasses ** 2 + gears ** 2 + tablets ** 2);
+
+    return countOnFirstStep + countOnSecondStep;
 }
 
-console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
+console.log(solve(-1, 2, 2))
