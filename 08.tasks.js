@@ -535,14 +535,25 @@
 //
 // console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
 
-function solve(compasses, gears, tablets) {
-    if (compasses < 0 && gears < 0 && tablets < 0) {
-        return 0
-    }
-    let countOnFirstStep = Math.min(compasses, gears, tablets) * 7;
-    let countOnSecondStep = (compasses ** 2 + gears ** 2 + tablets ** 2);
+// function solve(compasses, gears, tablets) {
+//     if (compasses < 0 && gears < 0 && tablets < 0) {
+//         return 0
+//     }
+//     let countOnFirstStep = Math.min(compasses, gears, tablets) * 7;
+//     let countOnSecondStep = (compasses ** 2 + gears ** 2 + tablets ** 2);
+//
+//     return countOnFirstStep + countOnSecondStep;
+// }
+//
+// console.log(solve(-1, 2, 2))
 
-    return countOnFirstStep + countOnSecondStep;
+function betterThanAverage(classPoints, yourPoints) {
+    // Your code here
+    let middle = 0
+    for (let i = 0; i < classPoints.length; i++) {
+        middle += classPoints[i]
+    }
+    return yourPoints >  (middle / classPoints.length)
 }
 
-console.log(solve(-1, 2, 2))
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
