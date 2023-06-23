@@ -558,8 +558,14 @@
 //
 // console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
 
-function f(x, cc) {
-    return x === cc.a ? cc.b : x === cc.b ? cc.c : cc.a
+// function f(x, cc) {
+//     return x === cc.a ? cc.b : x === cc.b ? cc.c : cc.a
+// }
+//
+// console.log(f( 3, { a:3, b:4, c:5 } ))
+
+function getChar(c){
+    return String.fromCharCode(c);
 }
 
-console.log(f( 3, { a:3, b:4, c:5 } ))
+console.log(getChar(55))
