@@ -547,13 +547,19 @@
 //
 // console.log(solve(-1, 2, 2))
 
-function betterThanAverage(classPoints, yourPoints) {
-    // Your code here
-    let middle = 0
-    for (let i = 0; i < classPoints.length; i++) {
-        middle += classPoints[i]
-    }
-    return yourPoints >  (middle / classPoints.length)
+// function betterThanAverage(classPoints, yourPoints) {
+//     // Your code here
+//     let middle = 0
+//     for (let i = 0; i < classPoints.length; i++) {
+//         middle += classPoints[i]
+//     }
+//     return yourPoints >  (middle / classPoints.length)
+// }
+//
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
+
+function f(x, cc) {
+    return x === cc.a ? cc.b : x === cc.b ? cc.c : cc.a
 }
 
-console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
+console.log(f( 3, { a:3, b:4, c:5 } ))
