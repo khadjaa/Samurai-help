@@ -563,9 +563,22 @@
 // }
 //
 // console.log(f( 3, { a:3, b:4, c:5 } ))
+//
+// function getChar(c){
+//     return String.fromCharCode(c);
+// }
+//
+// console.log(getChar(55))
 
-function getChar(c){
-    return String.fromCharCode(c);
-}
-
-console.log(getChar(55))
+function peopleWithAgeDrink(old) {
+    switch (old) {
+        case (old < 14):
+            return "drink toddy"
+        case (old > 14 && old < 17):
+            return "drink coke"
+        case (old > 17 && old < 30) :
+            return "drink beer"
+        default :
+            return 'drink whisky'
+    }
+};
