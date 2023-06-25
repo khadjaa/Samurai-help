@@ -570,15 +570,28 @@
 //
 // console.log(getChar(55))
 
-function peopleWithAgeDrink(old) {
-    switch (old) {
-        case (old < 14):
-            return "drink toddy"
-        case (old > 14 && old < 17):
-            return "drink coke"
-        case (old > 17 && old < 30) :
-            return "drink beer"
-        default :
-            return 'drink whisky'
+// function peopleWithAgeDrink(old) {
+//     switch (old) {
+//         case (old < 14):
+//             return "drink toddy"
+//         case (old > 14 && old < 17):
+//             return "drink coke"
+//         case (old > 17 && old < 30) :
+//             return "drink beer"
+//         default :
+//             return 'drink whisky'
+//     }
+// }
+
+function sumMul(n, m) {
+    if (n > 0 && m > 0) {
+        let sum = 0
+        for (let i = 0; i < m; i += n) {
+                sum += i
+        }
+        return sum
     }
-};
+    return "INVALID"
+}
+
+console.log(sumMul(2, -9))
