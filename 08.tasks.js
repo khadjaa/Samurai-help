@@ -603,8 +603,22 @@
 //
 // console.log(hero(10, 5))
 
-function fakeBin(x){
-    return x.toString().split('').map(el => el >= 5 ? '1' : '0').join('')
+// function fakeBin(x){
+//     return x.toString().split('').map(el => el >= 5 ? '1' : '0').join('')
+// }
+//
+// console.log(fakeBin(45385593107843568))
+
+function consonantCount(str) {
+    // ... a, e, i, o, u
+    return str.toLowerCase().split('').reduce((acc, el) => {
+        if ('aeiou'.indexOf(el) === -1) {
+            if (el.charCodeAt(0) >= 97 && el.charCodeAt(0) <= 122) {
+                acc++
+            }
+        }
+        return acc
+    }, 0)
 }
 
-console.log(fakeBin(45385593107843568))
+console.log(consonantCount('qweq'))
