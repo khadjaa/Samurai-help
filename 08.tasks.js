@@ -609,16 +609,24 @@
 //
 // console.log(fakeBin(45385593107843568))
 
-function consonantCount(str) {
-    // ... a, e, i, o, u
-    return str.toLowerCase().split('').reduce((acc, el) => {
-        if ('aeiou'.indexOf(el) === -1) {
-            if (el.charCodeAt(0) >= 97 && el.charCodeAt(0) <= 122) {
-                acc++
-            }
-        }
-        return acc
-    }, 0)
-}
+// function consonantCount(str) {
+//     // ... a, e, i, o, u
+//     return str.toLowerCase().split('').reduce((acc, el) => {
+//         if ('aeiou'.indexOf(el) === -1) {
+//             if (el.charCodeAt(0) >= 97 && el.charCodeAt(0) <= 122) {
+//                 acc++
+//             }
+//         }
+//         return acc
+//     }, 0)
+// }
 
-console.log(consonantCount('qweq'))
+// console.log(consonantCount('qweq'))
+
+function tripleTrouble(one, two, three){
+    let st = ''
+    for (let i = 0; i < one.length; i++) {
+      st += one[i] + two[i] + three[i]
+    }
+    return st
+}
