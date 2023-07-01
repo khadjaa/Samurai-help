@@ -623,10 +623,24 @@
 
 // console.log(consonantCount('qweq'))
 
-function tripleTrouble(one, two, three){
-    let st = ''
-    for (let i = 0; i < one.length; i++) {
-      st += one[i] + two[i] + three[i]
+// function tripleTrouble(one, two, three){
+//     let st = ''
+//     for (let i = 0; i < one.length; i++) {
+//       st += one[i] + two[i] + three[i]
+//     }
+//     return st
+// }
+
+function noBoringZeros(n) {
+    let sp = n.toString().split('')
+    let arr = []
+    for (let i = 0; i < sp.length; i++) {
+        if (sp[i] === '0') {
+            if (sp[i + 1] === '0') {
+                return arr
+            }
+        }
+        arr.push(sp[i])
     }
-    return st
+    return arr
 }
