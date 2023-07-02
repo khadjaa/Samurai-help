@@ -631,14 +631,39 @@
 //     return st
 // }
 
-function noBoringZeros(n) {
-    if (n === 0) {
-        return 0;
+// function noBoringZeros(n) {
+//     if (n === 0) {
+//         return 0;
+//     }
+//     while (n % 10 === 0) {
+//         n = n / 10;
+//     }
+//     return n;
+// }
+//
+// console.log(noBoringZeros(4002))
+
+function getFreeUrinals(urinals) {
+    if (urinals.includes('11')) {
+        return -1
     }
-    while (n % 10 === 0) {
-        n = n / 10;
+    if (urinals === '0') {
+        return 1
     }
-    return n;
+    let count = 0
+
+    for (let i = 0; i < urinals.length; i++) {
+        if (urinals[i] === '0') {
+            if ((i === 0 || urinals[i - 1] === '0') && (i === urinals.length - 1 || urinals[i + 1] === '0')) {
+                count++;
+                i++; // Пропускаем следующий унитаз, так как он должен быть оставлен свободным
+            }
+        }
+    }
+    return count
 }
 
-console.log(noBoringZeros(4002))
+
+
+console.log(getFreeUrinals("000000000"))
+
