@@ -632,15 +632,13 @@
 // }
 
 function noBoringZeros(n) {
-    let sp = n.toString().split('')
-    let arr = []
-    for (let i = 0; i < sp.length; i++) {
-        if (sp[i] === '0') {
-            if (sp[i + 1] === '0') {
-                return arr
-            }
-        }
-        arr.push(sp[i])
+    if (n === 0) {
+        return 0;
     }
-    return arr
+    while (n % 10 === 0) {
+        n = n / 10;
+    }
+    return n;
 }
+
+console.log(noBoringZeros(4002))
