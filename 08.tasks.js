@@ -643,27 +643,34 @@
 //
 // console.log(noBoringZeros(4002))
 
-function getFreeUrinals(urinals) {
-    if (urinals.includes('11')) {
-        return -1
-    }
-    if (urinals === '0') {
-        return 1
-    }
-    let count = 0
+// function getFreeUrinals(urinals) {
+//     if (urinals.includes('11')) {
+//         return -1
+//     }
+//     if (urinals === '0') {
+//         return 1
+//     }
+//     let count = 0
+//
+//     for (let i = 0; i < urinals.length; i++) {
+//         if (urinals[i] === '0') {
+//             if ((i === 0 || urinals[i - 1] === '0') && (i === urinals.length - 1 || urinals[i + 1] === '0')) {
+//                 count++;
+//                 i++; // Пропускаем следующий унитаз, так как он должен быть оставлен свободным
+//             }
+//         }
+//     }
+//     return count
+// }
+//
+// console.log(getFreeUrinals("000000000"))
 
-    for (let i = 0; i < urinals.length; i++) {
-        if (urinals[i] === '0') {
-            if ((i === 0 || urinals[i - 1] === '0') && (i === urinals.length - 1 || urinals[i + 1] === '0')) {
-                count++;
-                i++; // Пропускаем следующий унитаз, так как он должен быть оставлен свободным
-            }
-        }
+function binaryPyramid(m,n){
+    let sum = 0
+    for (let i = m; i <= n; i++) {
+        sum += +i.toString(2)
     }
-    return count
+    return sum.toString(2)
 }
 
-
-
-console.log(getFreeUrinals("000000000"))
-
+console.log(binaryPyramid(1, 4))
