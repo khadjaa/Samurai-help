@@ -665,12 +665,26 @@
 //
 // console.log(getFreeUrinals("000000000"))
 
-function binaryPyramid(m,n){
-    let sum = 0
-    for (let i = m; i <= n; i++) {
-        sum += +i.toString(2)
-    }
-    return sum.toString(2)
+// function binaryPyramid(m,n){
+//     let sum = 0
+//     for (let i = m; i <= n; i++) {
+//         sum += +i.toString(2)
+//     }
+//     return sum.toString(2)
+// }
+//
+// console.log(binaryPyramid(1, 4))
+
+function rgbToGrayscale(color){
+    const r = parseInt(color.substring(1, 3), 16);
+    const g = parseInt(color.substring(3, 5), 16);
+    const b = parseInt(color.substring(5, 7), 16);
+
+    const y = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
+
+    const grayscaleColor = y.toString(16).padStart(2, '0').repeat(3);
+
+    return `#${grayscaleColor}`;
 }
 
-console.log(binaryPyramid(1, 4))
+console.log(rgbToGrayscale('#000028'))
