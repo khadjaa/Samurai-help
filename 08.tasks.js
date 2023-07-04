@@ -688,3 +688,7 @@ function rgbToGrayscale(color){
 }
 
 console.log(rgbToGrayscale('#000028'))
+
+function smash (words) {
+    return words.join(' ')
+};
