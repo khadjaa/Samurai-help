@@ -675,20 +675,40 @@
 //
 // console.log(binaryPyramid(1, 4))
 
-function rgbToGrayscale(color){
-    const r = parseInt(color.substring(1, 3), 16);
-    const g = parseInt(color.substring(3, 5), 16);
-    const b = parseInt(color.substring(5, 7), 16);
+// function rgbToGrayscale(color){
+//     const r = parseInt(color.substring(1, 3), 16);
+//     const g = parseInt(color.substring(3, 5), 16);
+//     const b = parseInt(color.substring(5, 7), 16);
+//
+//     const y = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
+//
+//     const grayscaleColor = y.toString(16).padStart(2, '0').repeat(3);
+//
+//     return `#${grayscaleColor}`;
+// }
+//
+// console.log(rgbToGrayscale('#000028'))
+//
+// function smash (words) {
+//     return words.join(' ')
+// }
 
-    const y = Math.round(0.299 * r + 0.587 * g + 0.114 * b);
-
-    const grayscaleColor = y.toString(16).padStart(2, '0').repeat(3);
-
-    return `#${grayscaleColor}`;
+function smaller(nums) {
+    let arr = []
+    let num = nums
+    let count = 0
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] > nums[j]) {
+                count++
+            }
+        }
+        arr.push(count)
+        num.slice(i)
+        count = 0
+    }
+    return arr
 }
 
-console.log(rgbToGrayscale('#000028'))
-
-function smash (words) {
-    return words.join(' ')
-};
+console.log(smaller([5, 4, 7, 9, 2, 4, 4, 5, 6]))
+                         //4, 1, 5, 5, 0, 0, 0, 0, 0
