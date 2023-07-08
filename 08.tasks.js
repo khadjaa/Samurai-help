@@ -713,12 +713,13 @@
 // console.log(smaller([5, 4, 7, 9, 2, 4, 4, 5, 6]))
 //4, 1, 5, 5, 0, 0, 0, 0, 0
 
-function binaryFingers(binString) {
-    const fingers = ['Pinkie','Ring','Middle','Index','Thumb'];
-    let f = '0'.repeat(5-binString.length)+binString;
-    let ans = [];
-    f.split(``).map((v,i)=>v==='1'?ans.push(fingers[i]):v)
-    return ans
-}
+// function binaryFingers(binString) {
+//     const fingers = ['Pinkie','Ring','Middle','Index','Thumb'];
+//     let f = '0'.repeat(5-binString.length)+binString;
+//     let ans = [];
+//     f.split(``).map((v,i)=>v==='1'?ans.push(fingers[i]):v)
+//     return ans
+// }
+//
+// console.log(binaryFingers('101'))
 
-console.log(binaryFingers('101'))
