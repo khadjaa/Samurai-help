@@ -7,3 +7,5 @@ function raiseHands(step) {
 
     return result;
 }
+
+console.log(raiseHands(98))
