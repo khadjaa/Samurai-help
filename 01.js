@@ -65,40 +65,39 @@ function checkUserAge (age) {
 // console.log(checkUserAge(user.age)  + ' ---- user after copy')
 // console.log(checkUserAge(copyUser.age) + ' ---- new person')
 
-// //1. Вывести массив с именами, в котором все имена будут прописаны большими буквами
-// console.log(students.map())
+//1. Вывести массив с именами, в котором все имена будут прописаны большими буквами
+console.log(students.map(el => el.name.toUpperCase()))
 
-// // 2. Вывести данные студентов с баллами >= 100
-// console.log(students.filter())
+// 2. Вывести данные студентов с баллами >= 100
+console.log(students.filter(el => el.scores >= 100))
 
-// //3. Сформируйте массив холостых студентов
-// console.log(students.filter())
+//3. Сформируйте массив холостых студентов
+console.log(students.filter(el => !el.isMarried ))
 
 //4. Объект user добавить в массив
-// let copyStudents = [...students]
-// console.log(typeof copyStudents.push(user))
-// console.log(copyStudents)
+let copyStudents = [...students]
+console.log(typeof copyStudents.push(user))
+console.log(copyStudents)
 
-//5. Удалить студента "John"
-//console.log(students.filter())
+// 5. Удалить студента "John"
+console.log(students.filter(el => el.name !== 'John'))
 
 //6***. Ник женился и в списке нужно заменить его статус на true
-// console.log(students.map())
+console.log(students.map(el => el.name === 'Nick' ? {...el, isMarried: true} : el))
 
 
 //7. Проверка на четнотность или не четность, вывод: "Четный" или "Нечетный"
-// const evenOrOdd = (number) => {
-// }
-// console.log(const evenOrOdd(7))
-// console.log(const evenOrOdd(8))
+const evenOrOdd = (number) => number % 2 === 0 ? 'odd' : 'even'
+console.log(evenOrOdd(7))
+console.log(evenOrOdd(8))
 
 //8. Создайте функцию, делится ли число n на оба числа x и y без остатка, return true or false.
 
-// function isDivisible(n, x, y) {
-// }
-// console.log(isDivisible(3,3,4))
-// console.log(isDivisible(12,3,4))
-
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0;
+}
+console.log(isDivisible(3,3,4))
+console.log(isDivisible(12,3,4))
 
 
 const doAfter = (second) => {
