@@ -132,7 +132,11 @@ console.log(every)
 
 //Задание: На данный момент вышли новые эпизоды в аниме title: "Demon Slayer: Kimetsu no Yaiba", замените старое
 // знаечение на 28
+let map = animeArray.map(el => el.title === 'Demon Slayer: Kimetsu no Yaiba'
+    ? {...el, episodes: 28}
+    : el)
 
+console.log(map)
 
 // 5. flat()
 // Этот метод принимает в качестве аргумента массив массивов и сглаживает вложенные массивы в массив верхнего уровня.
