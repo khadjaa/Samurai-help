@@ -23,7 +23,6 @@ convert(0.0001388888888888889)
 //wrong output -> [1]
 Round the seconds to the nearest integer.
 */
-
 function convert(decimalDegrees) {
     const degrees = Math.floor(decimalDegrees);
     const minutesDecimal = (decimalDegrees - degrees) * 60;
