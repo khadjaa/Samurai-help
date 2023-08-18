@@ -195,8 +195,8 @@ console.log(filteredAnimeArray)
 
 //9.find()
 // Задание: Найти первое аниме, у которого главный персонаж начинается на букву "L".
-
-
+const findEl = animeArray.find(el => el.mainCharacter[0] === 'L')
+console.log(findEl)
 //10. sort()
 
 //Задание:
