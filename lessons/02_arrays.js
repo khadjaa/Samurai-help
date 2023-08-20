@@ -186,6 +186,9 @@ console.log(filteredAnimeArray)
 // Этот метод применяет функцию к каждому элементу массива.
 
 //Задание: Найти все аниме в жанре которых "Action", и добавить их в отдельный массив.
+let newArray = []
+animeArray.forEach(el => el.genre.includes('Action') ? newArray.push(el) : null)
+
 
 
 //8. findIndex()
