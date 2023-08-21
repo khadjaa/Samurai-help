@@ -196,6 +196,12 @@ animeArray.forEach(el => el.genre.includes('Action') ? newArray.push(el) : null)
 //в противном случае "такого объекта в массиве нет"
 //2) Найти индекс первого объекта в массиве, который соответствует аниме с количеством эпизодов больше 100.
 
+const findInd = animeArray.findIndex((el, ind) => el.episodes > 100)
+console.log(findInd)
+
+const findInd2 = animeArray.findIndex(el => el.title === 'One Piece' && el.episodes > 500)
+console.log(findInd2)
+
 //9.find()
 // Задание: Найти первое аниме, у которого главный персонаж начинается на букву "L".
 const findEl = animeArray.find(el => el.mainCharacter[0] === 'L')
